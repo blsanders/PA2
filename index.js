@@ -3,11 +3,12 @@ let myActs = [];
 
 
 function handleOnLoad() {
-  
+
 let act = {};
 
   myActs.push(act);
   myActs=JSON.parse(localStorage.getItem('myActs'));
+  if(!myActs){myActs = []}
   myActs.sort((d1, d2) => new Date(d2.Date) - new Date(d1.Date));
   console.log(myActs);
   let html=`
